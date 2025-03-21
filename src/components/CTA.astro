@@ -1,0 +1,67 @@
+---
+const {
+  title = 'Ready to Transform Your Data Strategy?',
+  description = 'Schedule a free consultation with our experts to discuss your data needs and discover how we can help you achieve your business goals.',
+  buttonText = 'Schedule Free Strategy Call',
+  buttonLink = '/contact',
+} = Astro.props;
+---
+
+<div class="cta-section">
+  <h3>{title}</h3>
+  <p>{description}</p>
+  <a href={buttonLink} class="cta-button">{buttonText}</a>
+</div>
+
+<style>
+  .section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .cta-section {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, rgba(0, 192, 252, 0.1), rgba(0, 192, 252, 0.05));
+    border-radius: 1rem;
+  }
+
+  .cta-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--text-color), #00c0fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .cta-section p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #00c0fc, #00a0e0);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 192, 252, 0.3);
+  }
+</style>

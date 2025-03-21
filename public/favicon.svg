@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1280mm"
+   height="1280mm"
+   viewBox="0 0 1280 1280"
+   version="1.1"
+   id="svg8"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer2">
+    <g
+       id="g3"
+       transform="translate(77.89961,4.6429554)">
+      <g
+         id="g1"
+         transform="translate(3.1933594e-5)">
+        <rect
+           style="fill:#000080;stroke:none;stroke-width:2.35903;stroke-linecap:round;paint-order:stroke fill markers"
+           id="rect1-3"
+           width="108.49741"
+           height="220.74304"
+           x="444.94653"
+           y="529.62848"
+           ry="54.248707" />
+        <rect
+           style="fill:#00008c;stroke:none;stroke-width:2.49446;stroke-linecap:round;paint-order:stroke fill markers"
+           id="rect1-3-6"
+           width="108.49741"
+           height="246.81509"
+           x="574.88739"
+           y="516.59247"
+           ry="54.248707" />
+        <rect
+           style="fill:#0000a4;stroke:none;stroke-width:2.49446;stroke-linecap:round;paint-order:stroke fill markers"
+           id="rect1-3-6-6"
+           width="108.49741"
+           height="246.81509"
+           x="834.7691"
+           y="518.09711"
+           ry="54.248707" />
+        <rect
+           style="fill:#000098;stroke:none;stroke-width:2.01872;stroke-linecap:round;paint-order:stroke fill markers"
+           id="rect1-3-6-7"
+           width="108.49741"
+           height="161.64648"
+           x="704.82825"
+           y="559.17676"
+           ry="54.248707" />
+        <rect
+           style="fill:#000074;stroke:none;stroke-width:2.35903;stroke-linecap:round;paint-order:stroke fill markers"
+           id="rect1-3-8"
+           width="108.49741"
+           height="220.74304"
+           x="315.00568"
+           y="529.62848"
+           ry="54.248707" />
+        <path
+           style="fill:none;stroke:#000064;stroke-width:100;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:fill markers stroke"
+           id="path1-2"
+           d="M 417.70775,986.16827 A 419.04797,419.04797 0 0 1 229.87581,642.59217 419.04797,419.04797 0 0 1 407.89693,293.83171" />
+        <path
+           style="fill:none;stroke:#0000b4;stroke-width:100;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:fill markers stroke"
+           id="path1-2-3"
+           d="M -849.11702,976.88238 A 419.04797,419.04797 0 0 1 -1036.949,633.30628 419.04797,419.04797 0 0 1 -858.92784,284.54582"
+           transform="scale(-1,1)" />
+      </g>
+      <g
+         id="g2"
+         transform="translate(-7.2514408,-4.704224)">
+        <path
+           style="fill:none;stroke:#00c0fc;stroke-width:102.533;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:fill markers stroke"
+           id="path1"
+           d="M 931.26313,1118.1721 A 554.6557,554.6557 0 0 1 223.62134,994.48762 554.6557,554.6557 0 0 1 231.5607,276.16199 554.6557,554.6557 0 0 1 941.76336,168.14839" />
+        <circle
+           style="fill:#00c0fc;fill-opacity:1;stroke:none;stroke-width:123.077;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:fill markers stroke"
+           id="path2"
+           cx="1044.2426"
+           cy="240.29588"
+           r="50" />
+        <circle
+           style="fill:#00c0fc;fill-opacity:1;stroke:none;stroke-width:123.077;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:fill markers stroke"
+           id="path2-1"
+           cx="1044.2426"
+           cy="1058.4696"
+           r="50" />
+      </g>
+    </g>
+  </g>
+</svg>

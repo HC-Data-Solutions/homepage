@@ -1,0 +1,186 @@
+---
+import { CaretDown } from '@phosphor-icons/react';
+
+const faqs = [
+  {
+    question: 'What types of businesses do you work with?',
+    answer:
+      "We work with businesses of all sizes across various industries, from startups to large enterprises. Our solutions are tailored to meet the specific needs of each client, whether they're in healthcare, finance, retail, or technology.",
+  },
+  {
+    question: 'How long does a typical project take?',
+    answer:
+      "Project timelines vary depending on the scope and complexity of the solution. A typical data analytics project can take 4-8 weeks, while larger implementations may span several months. We'll provide a detailed timeline during our initial consultation.",
+  },
+  {
+    question: 'What technologies do you use?',
+    answer:
+      'We use a wide range of modern technologies including SQL databases, Python, R, Tableau, Power BI, and various cloud platforms. Our stack is chosen based on your specific needs and existing infrastructure.',
+  },
+  {
+    question: 'Do you provide ongoing support?',
+    answer:
+      'Yes, we offer comprehensive support packages including regular maintenance, updates, and 24/7 emergency assistance. We ensure your data solutions continue to perform optimally long after implementation.',
+  },
+  {
+    question: 'How do you ensure data security?',
+    answer:
+      'We implement industry-standard security measures including encryption, access controls, and regular security audits. We also ensure compliance with relevant data protection regulations and standards.',
+  },
+];
+---
+
+<section class="section faq">
+  <div class="section-content">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-grid">
+      {
+        faqs.map((faq, _) => (
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>{faq.question}</span>
+              <CaretDown weight="bold" size={24} class="caret" />
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>{faq.answer}</p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, var(--text-color), #00c0fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .faq-grid {
+    margin-top: 3rem;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .faq-question {
+    width: 100%;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .faq-question:hover {
+    color: var(--star-color);
+  }
+
+  .caret {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .faq-question[aria-expanded='true'] .caret {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .faq-answer-content {
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0.1s;
+    padding: 0 0 1.5rem;
+  }
+
+  .faq-item[aria-expanded='true'] .faq-answer {
+    height: var(--expanded-height, auto);
+  }
+
+  .faq-item[aria-expanded='true'] .faq-answer-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .faq-answer p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    opacity: 0.9;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const faqItem = button.parentElement;
+      const faqAnswer = faqItem?.querySelector('.faq-answer') as HTMLElement;
+      const faqContent = faqItem?.querySelector('.faq-answer-content') as HTMLElement;
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+      // Close all other items
+      document.querySelectorAll('.faq-item').forEach(item => {
+        if (item !== faqItem) {
+          item.setAttribute('aria-expanded', 'false');
+          const question = item.querySelector('.faq-question');
+          if (question) {
+            question.setAttribute('aria-expanded', 'false');
+          }
+          const answer = item.querySelector('.faq-answer') as HTMLElement;
+          if (answer) {
+            answer.style.height = '0';
+          }
+        }
+      });
+
+      // Toggle current item
+      if (faqAnswer && faqContent) {
+        if (!isExpanded) {
+          // Opening
+          faqAnswer.style.height = `${faqContent.offsetHeight}px`;
+        } else {
+          // Closing
+          faqAnswer.style.height = '0';
+        }
+      }
+
+      button.setAttribute('aria-expanded', String(!isExpanded));
+      if (faqItem) {
+        faqItem.setAttribute('aria-expanded', String(!isExpanded));
+      }
+    });
+  });
+
+  // Set initial heights for all FAQ answers
+  document.querySelectorAll('.faq-answer').forEach(answer => {
+    const content = answer.querySelector('.faq-answer-content');
+    if (content) {
+      (answer as HTMLElement).style.height = '0';
+    }
+  });
+</script>
