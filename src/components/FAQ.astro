@@ -3,29 +3,44 @@ import { CaretDown } from '@phosphor-icons/react';
 
 const faqs = [
   {
-    question: 'What types of businesses do you work with?',
+    question: 'What kind of businesses do you work with?',
     answer:
-      "We work with businesses of all sizes across various industries, from startups to large enterprises. Our solutions are tailored to meet the specific needs of each client, whether they're in healthcare, finance, retail, or technology.",
+      'I work with fast-growing startups and mid-sized companies that are dealing with data scaling challenges. This includes e-commerce, fintech, healthcare, and any business where data volume and complexity are increasing rapidly.',
+  },
+  {
+    question: 'What happens during the first call?',
+    answer:
+      "The discovery call is a no-obligation conversation where we discuss your current challenges, goals, and technical setup. I'll ask about your data infrastructure, pain points, and growth plans to create a tailored scaling strategy.",
+  },
+  {
+    question: 'How do I know if I need help with scaling?',
+    answer:
+      "If you're experiencing slow query times, inconsistent data, frequent system crashes under load, or if you're unsure how to handle increasing data volumes, it's time to consider scaling assistance.",
+  },
+  {
+    question: 'Do you work with existing systems or only new builds?',
+    answer:
+      'I work with both! I can optimize and scale existing systems or design and build new ones from scratch. Many projects involve enhancing current infrastructure rather than complete rebuilds.',
+  },
+  {
+    question: 'What kinds of problems can you help solve?',
+    answer:
+      "I help solve issues like slow data processing, unreliable pipelines, poor data quality, inefficient storage, lack of real-time insights, and systems that can't handle growth.",
+  },
+  {
+    question: "What's your typical process like?",
+    answer:
+      'We start with discovery, then move to planning and design, followed by implementation and testing. I provide regular updates and ensure everything works smoothly before handover.',
   },
   {
     question: 'How long does a typical project take?',
     answer:
-      "Project timelines vary depending on the scope and complexity of the solution. A typical data analytics project can take 4-8 weeks, while larger implementations may span several months. We'll provide a detailed timeline during our initial consultation.",
+      "Projects vary widely - from 2-4 weeks for smaller optimizations to 3-6 months for complex system rebuilds. I'll give you a specific timeline during our discovery call.",
   },
   {
-    question: 'What technologies do you use?',
+    question: 'Can you work with my in-house dev team?',
     answer:
-      'We use a wide range of modern technologies including SQL databases, Python, R, Tableau, Power BI, and various cloud platforms. Our stack is chosen based on your specific needs and existing infrastructure.',
-  },
-  {
-    question: 'Do you provide ongoing support?',
-    answer:
-      'Yes, we offer comprehensive support packages including regular maintenance, updates, and 24/7 emergency assistance. We ensure your data solutions continue to perform optimally long after implementation.',
-  },
-  {
-    question: 'How do you ensure data security?',
-    answer:
-      'We implement industry-standard security measures including encryption, access controls, and regular security audits. We also ensure compliance with relevant data protection regulations and standards.',
+      'Absolutely! I can collaborate with your existing team, provide guidance, or handle the entire project. Many clients prefer a hybrid approach where I lead while training their developers.',
   },
 ];
 ---
@@ -39,7 +54,7 @@ const faqs = [
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               <span>{faq.question}</span>
-              <CaretDown weight="bold" size={24} class="caret" />
+              <CaretDown weight="bold" size={24} className="caret" />
             </button>
             <div class="faq-answer">
               <div class="faq-answer-content">

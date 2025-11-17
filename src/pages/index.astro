@@ -6,23 +6,11 @@ import FAQ from '../components/FAQ.astro';
 import {
   ChartLine,
   Database,
-  Code,
-  TrendUp,
-  ShieldCheck,
-  Clock,
   MagnifyingGlass,
   Gear,
   CheckCircle,
   ChartBar,
-  ChartPieSlice,
-  FileSql,
-  Lock,
   Cloud,
-  Robot,
-  ChartLineUp,
-  Users,
-  ChartScatter,
-  FileXls,
 } from '@phosphor-icons/react';
 import CTA from '../components/CTA.astro';
 ---
@@ -31,109 +19,101 @@ import CTA from '../components/CTA.astro';
   <main>
     <Hero />
 
-    <section class="section">
-      <h2>Data-Driven Solutions</h2>
+    <section class="section problem">
+      <h2>Business is booming, but where to from here?</h2>
       <p>
-        We leverage cutting-edge technology and industry expertise to transform your data into
-        actionable insights. Our solutions are tailored to meet your specific business needs,
-        ensuring maximum efficiency and ROI.
+        Growth is exciting - but it brings new challenges. As demand increases, the systems and
+        tools that worked before can start to fall behind. Here's what that often looks like:
+      </p>
+      <ul class="problem-list">
+        <li>Customer demand is growing, but your systems aren't keeping up with the load</li>
+        <li>Every new product or team change adds complexity to your setup</li>
+        <li>Technical debt is building, and you're not sure what to fix first</li>
+        <li>You're unsure which tools, platforms, or architecture to bet on next</li>
+        <li>You have more data than ever - but no clear way to use it to make decisions</li>
+        <li>Dashboards, reports, and tools are inconsistent - or missing altogether</li>
+      </ul>
+    </section>
+
+    <section class="section introduction">
+      <h2>Building large-scale systems at every level for over a decade</h2>
+      <p>
+        Hi, I'm <strong>Hendrik Crause</strong>. For the past 10+ years, I've worked on systems
+        that:
+      </p>
+      <ul class="experience-list">
+        <li>Scrape and structure web-scale data</li>
+        <li>Process billions of records every day</li>
+        <li>Run complex analytics across diverse datasets</li>
+        <li>Pre-process data for machine learning pipelines</li>
+        <li>Support production-grade web applications</li>
+      </ul>
+      <p>
+        Whether it's scaling infrastructure, building data pipelines, or turning raw data into
+        business insight - I've likely solved something similar before.
+      </p>
+      <p>
+        I started <strong>HC Scaling Solutions</strong> to help fast-moving startups build a solid foundation
+        for growth. The goal is simple: apply deep technical experience to make sure your business is
+        ready for what's next - without the growing pains.
       </p>
     </section>
 
-    <section class="section two-column">
-      <div class="column">
-        <h2>Expert Team</h2>
-        <p>
-          Our team of data specialists brings years of experience across various industries. We
-          combine technical excellence with business acumen to deliver solutions that drive real
-          value for your organization.
-        </p>
-      </div>
-      <div class="column image-column">
-        <div class="image-placeholder">
-          <span>Team Image</span>
-        </div>
-      </div>
-    </section>
-
     <section class="section services">
-      <h2>Our Services</h2>
+      <h2>Services</h2>
+      <p>
+        These are just a few types of systems I can design and build, customised to your business'
+        scale and needs.
+      </p>
       <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">
-            <ChartLine weight="duotone" size={48} />
-          </div>
-          <h3>Data Analytics</h3>
-          <p>
-            Transform raw data into actionable insights with advanced analytics and visualization
-            tools.
-          </p>
-        </div>
         <div class="service-card">
           <div class="service-icon">
             <Database weight="duotone" size={48} />
           </div>
-          <h3>Data Management</h3>
-          <p>Efficiently store, organize, and maintain your data with robust database solutions.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <Code weight="duotone" size={48} />
-          </div>
-          <h3>Custom Solutions</h3>
-          <p>Tailored software solutions designed to meet your specific business requirements.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section benefits">
-      <h2>Why Choose Us</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">
-            <TrendUp weight="duotone" size={48} />
-          </div>
-          <h3>Increased Efficiency</h3>
+          <h3>Data Processing Pipelines</h3>
           <p>
-            Streamline your operations and boost productivity with optimized data workflows and
-            automated processes.
+            Build robust data pipelines that can handle your growing data volumes and processing
+            needs.
           </p>
         </div>
         <div class="service-card">
           <div class="service-icon">
-            <ShieldCheck weight="duotone" size={48} />
+            <Cloud weight="duotone" size={48} />
           </div>
-          <h3>Data Security</h3>
+          <h3>Distributed Storage Solutions</h3>
+          <p>Efficiently store and manage large datasets across distributed systems.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <ChartBar weight="duotone" size={48} />
+          </div>
+          <h3>Custom Dashboards</h3>
           <p>
-            Rest easy knowing your data is protected with enterprise-grade security measures and
-            compliance standards.
+            Create intuitive dashboards that provide real-time insights into your business metrics.
           </p>
         </div>
         <div class="service-card">
           <div class="service-icon">
-            <Clock weight="duotone" size={48} />
+            <ChartLine weight="duotone" size={48} />
           </div>
-          <h3>24/7 Support</h3>
-          <p>
-            Get round-the-clock assistance and maintenance to ensure your systems run smoothly at
-            all times.
-          </p>
+          <h3>Actionable insights</h3>
+          <p>Turn your data into actionable business intelligence and strategic recommendations.</p>
         </div>
       </div>
     </section>
 
     <section class="section process">
-      <h2>Our Process</h2>
+      <h2>What to expect</h2>
       <div class="process-grid">
         <div class="process-step">
           <div class="step-number">1</div>
           <div class="step-icon">
             <MagnifyingGlass weight="duotone" size={48} />
           </div>
-          <h3>Discovery</h3>
+          <h3>Schedule a discovery call</h3>
           <p>
-            We begin by understanding your unique needs, analyzing your current data infrastructure,
-            and identifying opportunities for improvement.
+            We'll work on a personalised scaling plan and a breakdown of how to go from where you
+            are to where you're going.
           </p>
         </div>
         <div class="process-step">
@@ -141,10 +121,10 @@ import CTA from '../components/CTA.astro';
           <div class="step-icon">
             <Gear weight="duotone" size={48} />
           </div>
-          <h3>Implementation</h3>
+          <h3>Implementation starts</h3>
           <p>
-            Our team develops and implements tailored solutions, ensuring seamless integration with
-            your existing systems.
+            We get to work setting up all the needed infrastructure and build all the required
+            pieces.
           </p>
         </div>
         <div class="process-step">
@@ -152,106 +132,11 @@ import CTA from '../components/CTA.astro';
           <div class="step-icon">
             <CheckCircle weight="duotone" size={48} />
           </div>
-          <h3>Optimization</h3>
+          <h3>Your business is ready to scale</h3>
           <p>
-            We continuously monitor and optimize your solutions, making adjustments to ensure
-            maximum performance and ROI.
+            Use the new insights to make the right business decisions and sleep easy knowing that
+            your new systems will handle the increased load.
           </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section features">
-      <h2>Our Capabilities</h2>
-      <div class="features-grid">
-        <div class="feature-item">
-          <div class="feature-icon">
-            <ChartBar weight="duotone" size={32} />
-          </div>
-          <h3>Business Intelligence</h3>
-          <p>
-            Interactive dashboards and reports that transform complex data into clear, actionable
-            insights.
-          </p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">
-            <ChartPieSlice weight="duotone" size={32} />
-          </div>
-          <h3>Data Visualization</h3>
-          <p>
-            Engaging charts and graphs that make your data story compelling and easy to understand.
-          </p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">
-            <Database weight="duotone" size={32} />
-          </div>
-          <h3>Data Integration</h3>
-          <p>Seamless connection of multiple data sources into a unified, accessible system.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">
-            <FileSql weight="duotone" size={32} />
-          </div>
-          <h3>SQL Development</h3>
-          <p>Optimized database queries and stored procedures for efficient data retrieval.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">
-            <Lock weight="duotone" size={32} />
-          </div>
-          <h3>Data Security</h3>
-          <p>Robust security measures ensuring your data remains protected and compliant.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">
-            <Cloud weight="duotone" size={32} />
-          </div>
-          <h3>Cloud Solutions</h3>
-          <p>Scalable cloud infrastructure and services for modern data needs.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">
-            <Robot weight="duotone" size={32} />
-          </div>
-          <h3>AI & Machine Learning</h3>
-          <p>Advanced analytics and predictive modeling for future-ready insights.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">
-            <ChartLineUp weight="duotone" size={32} />
-          </div>
-          <h3>Performance Analytics</h3>
-          <p>Comprehensive analysis of system and business performance metrics.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">
-            <Users weight="duotone" size={32} />
-          </div>
-          <h3>User Analytics</h3>
-          <p>Deep insights into user behavior and engagement patterns.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">
-            <ChartScatter weight="duotone" size={32} />
-          </div>
-          <h3>Statistical Analysis</h3>
-          <p>Advanced statistical methods for data validation and correlation analysis.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">
-            <FileXls weight="duotone" size={32} />
-          </div>
-          <h3>Excel Integration</h3>
-          <p>Seamless data export and import with Excel and other spreadsheet tools.</p>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">
-            <ChartLine weight="duotone" size={32} />
-          </div>
-          <h3>Custom Analytics</h3>
-          <p>Tailored analytical solutions for your specific business challenges.</p>
         </div>
       </div>
     </section>
@@ -259,13 +144,13 @@ import CTA from '../components/CTA.astro';
     <section class="section">
       <FAQ />
     </section>
-    <section class="section">
+    <section class="section" id="">
       <CTA />
     </section>
   </main>
 
   <footer>
-    <p class="footer-text">&copy; Copyright 2025 - HC Data Solutions</p>
+    <p class="footer-text">Copyright © 2024 HC Scaling Solutions. All rights reserved.</p>
   </footer>
 </Layout>
 
@@ -465,59 +350,53 @@ import CTA from '../components/CTA.astro';
     }
   }
 
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
+  .problem {
+    text-align: center;
   }
 
-  .feature-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1.5rem;
-    background: linear-gradient(45deg, var(--bg-color), var(--hover-color));
-    border-radius: 1rem;
-    transition: transform 0.2s;
+  .problem-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .feature-item:hover {
-    transform: translateY(-3px);
-  }
-
-  .feature-icon {
+  .problem-list li {
+    padding: 1rem;
     margin-bottom: 1rem;
-    color: var(--star-color);
-  }
-
-  .feature-item h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-color);
-  }
-
-  .feature-item p {
-    font-size: 0.95rem;
-    line-height: 1.5;
+    background: var(--bg-color);
+    border-left: 4px solid var(--star-color);
+    border-radius: 0.5rem;
+    text-align: left;
     color: var(--text-color);
     opacity: 0.9;
   }
 
-  @media (max-width: 1024px) {
-    .features-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .introduction {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
-  @media (max-width: 768px) {
-    .features-grid {
-      grid-template-columns: 1fr;
-    }
+  .experience-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
 
-    .feature-item {
-      padding: 1.25rem;
-    }
+  .experience-list li {
+    padding: 1rem;
+    background: linear-gradient(45deg, var(--bg-color), var(--hover-color));
+    border-radius: 0.5rem;
+    text-align: center;
+    color: var(--text-color);
+    opacity: 0.9;
   }
 
   .footer-text {
