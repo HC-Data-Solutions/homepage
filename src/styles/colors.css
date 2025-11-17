@@ -1,0 +1,46 @@
+/* HC Scaling Solutions Color Variables */
+/* Centralized color system for consistent theming */
+
+:root {
+  /* Primary Colors */
+  --color-primary-text: #000080;
+  --color-primary-accent: #000064;
+
+  /* Secondary Colors */
+  --color-secondary-accent: #000098;
+  --color-tertiary-accent: #00008c;
+
+  /* Accent Colors */
+  --color-bright-accent: #00c0fc;
+  --color-light-accent: #0000b4;
+
+  /* Neutral/Background */
+  --color-light-background: #ffffff;
+  --color-subtle-background: #f3f4f6;
+  --color-light-border: #e5e7eb;
+  --color-dark-border: #374151;
+  --color-dark-background: #1a1a1a;
+
+  /* Theme Variables (mapped to color system) */
+  --bg-color: var(--color-light-background);
+  --text-color: var(--color-primary-text);
+  --border-color: var(--color-light-border);
+  --hover-color: var(--color-subtle-background);
+  --star-color: var(--color-primary-accent);
+
+  /* Opacity Variants */
+  --color-primary-accent-30: rgba(0, 0, 100, 0.3);
+  --color-bright-accent-10: rgba(0, 192, 252, 0.1);
+  --color-bright-accent-05: rgba(0, 192, 252, 0.05);
+  --color-bright-accent-20: rgba(0, 192, 252, 0.2);
+  --color-bright-accent-30: rgba(0, 192, 252, 0.3);
+}
+
+.dark {
+  /* Theme Variables (dark mode overrides) */
+  --bg-color: var(--color-dark-background);
+  --text-color: var(--color-light-background);
+  --border-color: var(--color-dark-border);
+  --hover-color: var(--color-dark-border);
+  --star-color: var(--color-bright-accent);
+}

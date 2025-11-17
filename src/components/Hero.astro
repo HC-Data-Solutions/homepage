@@ -73,7 +73,7 @@ import { Star } from '@phosphor-icons/react';
   }
 
   :global(.dark) .star-decoration {
-    color: #00c0fc;
+    color: var(--star-color);
   }
 
   .star-decoration svg {
@@ -107,7 +107,7 @@ import { Star } from '@phosphor-icons/react';
     font-family: 'Orbitron', sans-serif;
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
-    background: linear-gradient(45deg, var(--text-color), #00c0fc);
+    background: linear-gradient(45deg, var(--text-color), var(--color-bright-accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: fadeInUp 1s ease-out;
@@ -124,7 +124,7 @@ import { Star } from '@phosphor-icons/react';
   .cta-button {
     padding: 1rem 2rem;
     font-size: 1.1rem;
-    background: linear-gradient(45deg, #000064, #000098);
+    background: linear-gradient(45deg, var(--color-primary-accent), var(--color-secondary-accent));
     color: white;
     border: none;
     border-radius: 30px;
@@ -137,7 +137,7 @@ import { Star } from '@phosphor-icons/react';
 
   .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 0, 100, 0.3);
+    box-shadow: 0 4px 15px var(--color-primary-accent-30);
   }
 
   .animated-background {
@@ -152,7 +152,7 @@ import { Star } from '@phosphor-icons/react';
   .gradient-sphere {
     position: absolute;
     border-radius: 50%;
-    background: radial-gradient(circle at center, rgba(0, 192, 252, 0.2), transparent 70%);
+    background: radial-gradient(circle at center, var(--color-bright-accent-20), transparent 70%);
     animation: float 25s infinite ease-in-out;
   }
 

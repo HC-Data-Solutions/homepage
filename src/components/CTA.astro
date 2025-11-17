@@ -41,14 +41,18 @@
     margin-top: 4rem;
     text-align: center;
     padding: 3rem 2rem;
-    background: linear-gradient(135deg, rgba(0, 192, 252, 0.1), rgba(0, 192, 252, 0.05));
+    background: linear-gradient(
+      135deg,
+      var(--color-bright-accent-10),
+      var(--color-bright-accent-05)
+    );
     border-radius: 1rem;
   }
 
   .cta-section h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    background: linear-gradient(45deg, var(--text-color), #00c0fc);
+    background: linear-gradient(45deg, var(--text-color), var(--color-bright-accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -120,7 +124,7 @@
     display: block;
     width: 100%;
     padding: 1rem 2rem;
-    background: linear-gradient(45deg, #00c0fc, #0000b4);
+    background: linear-gradient(45deg, var(--color-bright-accent), var(--color-light-accent));
     color: white;
     border: none;
     border-radius: 0.5rem;
@@ -134,6 +138,6 @@
 
   .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 192, 252, 0.3);
+    box-shadow: 0 4px 12px var(--color-bright-accent-30);
   }
 </style>
