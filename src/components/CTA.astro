@@ -81,19 +81,28 @@
   }
 
   .contact-form {
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
   }
 
   .form-group {
     margin-bottom: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
   }
 
   .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
+    flex-shrink: 0;
+    width: 80px;
     font-weight: 500;
     color: var(--text-color);
+    text-align: right;
+    padding-top: 0.75rem;
+  }
+
+  .form-group:has(textarea) label {
+    align-self: flex-start;
   }
 
   .form-group input,
@@ -116,7 +125,7 @@
 
   .form-group textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 200px;
   }
 
   .cta-button {

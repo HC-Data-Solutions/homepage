@@ -122,20 +122,22 @@ import { Star } from '@phosphor-icons/react';
 
   .cta-button {
     padding: 1rem 2rem;
-    background: linear-gradient(45deg, var(--color-primary-accent), var(--color-secondary-accent));
+    background: linear-gradient(45deg, var(--color-bright-accent), var(--color-light-accent));
     color: white;
     border: none;
-    border-radius: 30px;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
     cursor: pointer;
     transition:
-      transform 0.2s,
-      box-shadow 0.2s;
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
     animation: fadeInUp 1s ease-out 0.4s backwards;
   }
 
   .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px var(--color-primary-accent-30);
+    box-shadow: 0 4px 12px var(--color-bright-accent-30);
   }
 
   .animated-background {
