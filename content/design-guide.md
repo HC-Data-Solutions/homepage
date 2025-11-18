@@ -128,8 +128,17 @@ Fallback: sans-serif
 
 - **Typography**: H3 headings, body text
 - **Colors**: Bright Accent gradients, Primary Text
-- **Layout**: Card-style with form elements
+- **Layout**: Card-style with horizontal form labels (80px label width, right-aligned)
 - **Interactive**: Gradient buttons with hover effects
+- **Form Elements**: Labels positioned next to inputs for Name/Email/Company, above textarea for Message
+
+### Problem/Solution Sections
+
+- **Typography**: H2 headings with gradient text effects, card titles in standard body text
+- **Colors**: Bright Accent gradients for headings, Primary Text for content
+- **Layout**: Responsive card grid (auto-fit minmax(300px, 1fr)) with icons
+- **Interactive**: Hover effects with subtle transforms and shadows
+- **Icons**: Phosphor icons (48px duotone) representing problem/solution concepts
 
 ### FAQ Section
 
@@ -150,6 +159,13 @@ Fallback: sans-serif
 - `2rem` (32px) - Generous spacing
 - `3rem` (48px) - Large spacing
 - `4rem` (64px) - Extra large spacing
+
+### Implementation Notes
+
+- Section padding: `4rem 2rem` desktop, `3rem 1.5rem` mobile
+- Card padding: `2rem` for content cards, `1.5rem` mobile
+- Grid gaps: `2rem` desktop, `1.5rem` mobile
+- Form elements: `1rem 2rem` padding for inputs/buttons
 
 ## Implementation Guidelines
 
@@ -181,20 +197,73 @@ import '../styles/colors.css';
 import '../styles/typography.css';
 ---
 
-<div class="component">
-  <h1 class="font-orbitron text-5xl">Title</h1>
-  <p class="text-base">Body text with system fonts</p>
+<section class="section">
+  <h2 class="text-4xl">Section Title</h2>
+  <div class="content-grid">
+    <div class="content-card">
+      <div class="card-icon">
+        <Icon weight="duotone" size={48} />
+      </div>
+      <p>Card content with system fonts</p>
+    </div>
+  </div>
   <button class="cta-button">Action</button>
-</div>
+</section>
 
 <style>
-  .component {
-    color: var(--color-primary-text);
-    background: var(--bg-color);
+  .section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section h2 {
+    background: linear-gradient(45deg, var(--text-color), var(--color-bright-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .content-card {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(45deg, var(--bg-color), var(--hover-color));
+    border-radius: 1rem;
+    transition: transform 0.2s;
+  }
+
+  .content-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-icon {
+    margin-bottom: 1.5rem;
+    color: var(--star-color);
   }
 
   .cta-button {
-    background: linear-gradient(45deg, var(--color-primary-accent), var(--color-bright-accent));
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, var(--color-bright-accent), var(--color-light-accent));
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--color-bright-accent-30);
   }
 </style>
 ```
@@ -266,7 +335,9 @@ import '../styles/typography.css';
 
 - Use existing CSS variables and utility classes
 - Maintain consistency with established patterns
-- Update this guide when introducing new patterns
+- Document new patterns (card grids, icon usage) in this guide
+- Ensure responsive design with mobile-first approach
+- Test across light and dark themes
 
 ## Logo Usage Guidelines
 
@@ -305,10 +376,12 @@ Maintain a clear space around the logo equivalent to the height of the "H" in "H
 
 ```html
 <div style="font-family: system-ui, sans-serif; color: #000080;">
-  <strong>Hendrik Crause</strong><br>
-  Founder & Lead Data Engineer<br>
-  HC Scaling Solutions<br>
-  <a href="mailto:info@hcscalingsolutions.com" style="color: #00c0fc;">info@hcscalingsolutions.com</a><br>
+  <strong>Hendrik Crause</strong><br />
+  Founder & Lead Data Engineer<br />
+  HC Scaling Solutions<br />
+  <a href="mailto:info@hcscalingsolutions.com" style="color: #00c0fc;"
+    >info@hcscalingsolutions.com</a
+  ><br />
   <a href="https://hcscalingsolutions.com" style="color: #00c0fc;">hcscalingsolutions.com</a>
 </div>
 ```
@@ -387,8 +460,10 @@ Maintain a clear space around the logo equivalent to the height of the "H" in "H
 
 - **Technology**: Database, cloud, pipeline icons
 - **Business**: Growth, analytics, consulting icons
+- **Problem/Solution**: TrendUp (load), ShareNetwork (complexity), WarningCircle (debt), Lightbulb (decisions)
 - **Navigation**: Menu, arrow, search icons
 - **Social**: LinkedIn, Twitter, GitHub icons
+- **UI Elements**: MagnifyingGlass, Gear, CheckCircle, ChartBar, Cloud
 
 ### Usage Rules
 
