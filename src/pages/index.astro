@@ -11,6 +11,10 @@ import {
   CheckCircle,
   ChartBar,
   Cloud,
+  TrendUp,
+  ShareNetwork,
+  WarningCircle,
+  Lightbulb,
 } from '@phosphor-icons/react';
 import CTA from '../components/CTA.astro';
 ---
@@ -25,14 +29,44 @@ import CTA from '../components/CTA.astro';
         Growth is exciting - but it brings new challenges. As demand increases, the systems and
         tools that worked before can start to fall behind. Here's what that often looks like:
       </p>
-      <ul class="problem-list">
-        <li>Customer demand is growing, but your systems aren't keeping up with the load</li>
-        <li>Every new product or team change adds complexity to your setup</li>
-        <li>Technical debt is building, and you're not sure what to fix first</li>
-        <li>You're unsure which tools, platforms, or architecture to bet on next</li>
-        <li>You have more data than ever - but no clear way to use it to make decisions</li>
-        <li>Dashboards, reports, and tools are inconsistent - or missing altogether</li>
-      </ul>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">
+            <TrendUp weight="duotone" size={48} />
+          </div>
+          <p>Customer demand is growing, but your systems aren't keeping up with the load</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <ShareNetwork weight="duotone" size={48} />
+          </div>
+          <p>Every new product or team change adds complexity to your setup</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <WarningCircle weight="duotone" size={48} />
+          </div>
+          <p>Technical debt is building, and you're not sure what to fix first</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <Lightbulb weight="duotone" size={48} />
+          </div>
+          <p>You're unsure which tools, platforms, or architecture to bet on next</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <Database weight="duotone" size={48} />
+          </div>
+          <p>You have more data than ever - but no clear way to use it to make decisions</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <ChartBar weight="duotone" size={48} />
+          </div>
+          <p>Dashboards, reports, and tools are inconsistent - or missing altogether</p>
+        </div>
+      </div>
     </section>
 
     <section class="section introduction">
@@ -264,6 +298,15 @@ import CTA from '../components/CTA.astro';
     .service-card {
       padding: 1.5rem;
     }
+
+    .problem-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .problem-card {
+      padding: 1.5rem;
+    }
   }
 
   .process-grid {
@@ -349,22 +392,36 @@ import CTA from '../components/CTA.astro';
     text-align: center;
   }
 
-  .problem-list {
-    list-style: none;
-    padding: 0;
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
     margin: 2rem 0;
-    max-width: 800px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .problem-list li {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    background: var(--bg-color);
-    border-left: 4px solid var(--star-color);
-    border-radius: 0.5rem;
-    text-align: left;
+  .problem-card {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(45deg, var(--bg-color), var(--hover-color));
+    border-radius: 1rem;
+    transition: transform 0.2s;
+  }
+
+  .problem-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .problem-icon {
+    margin-bottom: 1.5rem;
+    color: var(--star-color);
+  }
+
+  .problem-card p {
+    font-size: 1rem;
+    line-height: 1.6;
     color: var(--text-color);
     opacity: 0.9;
   }
