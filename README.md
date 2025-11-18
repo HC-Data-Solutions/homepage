@@ -1,1 +1,1 @@
-# HC Data Solutions Homepage
+# HC Scaling Solutions Homepage

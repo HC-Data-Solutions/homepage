@@ -1,4 +1,4 @@
-# Agent Guidelines for HC Data Solutions Homepage
+# Agent Guidelines for HC Scaling Solutions Homepage
 
 ## Commands
 
