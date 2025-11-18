@@ -4,9 +4,11 @@ import { Star } from '@phosphor-icons/react';
 
 <section class="hero">
   <div class="hero-content">
-    <h1>Get ready for the next level of your business' growth</h1>
-    <p class="subtitle">Bring structure, visibility, and scalability to your growing operations.</p>
-    <a class="cta-button">Start Your Growth Plan</a>
+    <h1 class="font-orbitron text-5xl">Get ready for the next level of your business' growth</h1>
+    <p class="subtitle text-xl">
+      Bring structure, visibility, and scalability to your growing operations.
+    </p>
+    <a class="cta-button text-lg">Start Your Growth Plan</a>
   </div>
   <div class="star-decoration">
     <Star weight="fill" size={24} />
@@ -104,8 +106,6 @@ import { Star } from '@phosphor-icons/react';
   }
 
   h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3.5rem;
     margin-bottom: 1.5rem;
     background: linear-gradient(45deg, var(--text-color), var(--color-bright-accent));
     -webkit-background-clip: text;
@@ -114,7 +114,6 @@ import { Star } from '@phosphor-icons/react';
   }
 
   .subtitle {
-    font-size: 1.25rem;
     margin-bottom: 2rem;
     color: var(--text-color);
     opacity: 0.9;
@@ -123,7 +122,6 @@ import { Star } from '@phosphor-icons/react';
 
   .cta-button {
     padding: 1rem 2rem;
-    font-size: 1.1rem;
     background: linear-gradient(45deg, var(--color-primary-accent), var(--color-secondary-accent));
     color: white;
     border: none;

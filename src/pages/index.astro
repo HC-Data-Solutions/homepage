@@ -20,7 +20,7 @@ import CTA from '../components/CTA.astro';
     <Hero />
 
     <section class="section problem">
-      <h2>Business is booming, but where to from here?</h2>
+      <h2 class="text-4xl">Business is booming, but where to from here?</h2>
       <p>
         Growth is exciting - but it brings new challenges. As demand increases, the systems and
         tools that worked before can start to fall behind. Here's what that often looks like:
@@ -36,7 +36,7 @@ import CTA from '../components/CTA.astro';
     </section>
 
     <section class="section introduction">
-      <h2>Building large-scale systems at every level for over a decade</h2>
+      <h2 class="text-4xl">Building large-scale systems at every level for over a decade</h2>
       <p>
         Hi, I'm <strong>Hendrik Crause</strong>. For the past 10+ years, I've worked on systems
         that:
@@ -60,7 +60,7 @@ import CTA from '../components/CTA.astro';
     </section>
 
     <section class="section services">
-      <h2>Services</h2>
+      <h2 class="text-4xl">Services</h2>
       <p>
         These are just a few types of systems I can design and build, customised to your business'
         scale and needs.
@@ -103,7 +103,7 @@ import CTA from '../components/CTA.astro';
     </section>
 
     <section class="section process">
-      <h2>What to expect</h2>
+      <h2 class="text-4xl">What to expect</h2>
       <div class="process-grid">
         <div class="process-step">
           <div class="step-number">1</div>
@@ -111,10 +111,7 @@ import CTA from '../components/CTA.astro';
             <MagnifyingGlass weight="duotone" size={48} />
           </div>
           <h3>Schedule a discovery call</h3>
-          <p>
-            We'll work on a personalised scaling plan and a breakdown of how to go from where you
-            are to where you're going.
-          </p>
+          <p class="text-lg">Business is booming, but where to from here?</p>
         </div>
         <div class="process-step">
           <div class="step-number">2</div>
@@ -162,7 +159,6 @@ import CTA from '../components/CTA.astro';
   }
 
   .section h2 {
-    font-size: 2.5rem;
     margin-bottom: 1.5rem;
     background: linear-gradient(45deg, var(--text-color), var(--color-bright-accent));
     -webkit-background-clip: text;
@@ -170,7 +166,6 @@ import CTA from '../components/CTA.astro';
   }
 
   .section p {
-    font-size: 1.1rem;
     line-height: 1.8;
     color: var(--text-color);
     opacity: 0.9;
